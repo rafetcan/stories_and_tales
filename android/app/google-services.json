@@ -22,14 +22,6 @@
           }
         },
         {
-          "client_id": "855242805282-g99ioa3ke8jumvbk1a4fvh1hcvfrjslb.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.rafethokka.stories_and_tales",
-            "certificate_hash": "a78daa0aaa84dcb956b426b6e5d321ecde4c2e06"
-          }
-        },
-        {
           "client_id": "855242805282-on8h6s3sfes962t9j66vothsvo4k0o2m.apps.googleusercontent.com",
           "client_type": 3
         }
