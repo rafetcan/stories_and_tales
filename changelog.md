@@ -7,22 +7,14 @@
 ## 🚀 v2.5.1 - 21 Ekim 2025
 
 ### 🐛 Hata Düzeltmeleri
-- ✅ Google Play hesabı bağlama hatası düzeltildi
+- ✅ Google hesabı bağlama hatası düzeltildi
 
 ### 🔧 Geliştirici Notları
-- 📝 GitHub'a eklendi
+- 📝 Proje GitHub'a eklendi
 
 ---
 
 ## 🎉 v2.5.0 - 19 Ekim 2025
-
-### 🆕 Yeni Özellikler
-- 📱 AdMob Permission eklendi
-- 🧪 Google Play'de test sürümü yayınlandı
-
----
-
-## 🌟 v2.5.0 - 14 Ekim 2025
 
 ### 🆕 Yeni Özellikler
 - 👤 **Üyeliksiz Giriş**
@@ -36,6 +28,8 @@
 - 💬 **Hata & Öneri Bildir**
 - 🎨 **Yeni Logo**
 - ❤️ **Yeni Favoriler**
+- 📱 **AdMob Permission eklendi**
+- 🧪 **Google Play'de test sürümü yayınlandı**
 - 📜 **Eski Hikayeler** eklendi
 
 ### 🔧 Hata & Öneri Düzenlemeleri
