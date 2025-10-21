@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "855242805282",
+    "project_id": "storiesandtales-9d95e",
+    "storage_bucket": "storiesandtales-9d95e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855242805282:android:4248ada19efc421bdbba7b",
+        "android_client_info": {
+          "package_name": "com.rafethokka.stories_and_tales"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855242805282-15qkcv07e5tefh6afgic2vll2ee1a5su.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rafethokka.stories_and_tales",
+            "certificate_hash": "ee40a4e6453cc3812723755f79aacc8ac89e358e"
+          }
+        },
+        {
+          "client_id": "855242805282-g99ioa3ke8jumvbk1a4fvh1hcvfrjslb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rafethokka.stories_and_tales",
+            "certificate_hash": "a78daa0aaa84dcb956b426b6e5d321ecde4c2e06"
+          }
+        },
+        {
+          "client_id": "855242805282-on8h6s3sfes962t9j66vothsvo4k0o2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7VZ8okv1a4q0eJyHyvpCXNGZbdg9IvjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855242805282-on8h6s3sfes962t9j66vothsvo4k0o2m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "855242805282-is9a3vspeplq34kog6civmp0t930v4s5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rafethokka.storiesAndTales"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

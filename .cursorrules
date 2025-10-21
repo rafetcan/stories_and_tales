@@ -1,0 +1,196 @@
+
+### File Naming Conventions
+- Use snake_case for file names: `login_view.dart`, `story_model.dart`
+- View files: `*_view.dart` (e.g., `home_view.dart`, `profile_view.dart`)
+- ViewModel files: `*_viewmodel.dart` (e.g., `auth_viewmodel.dart`)
+- Model files: `*_model.dart` (e.g., `story_model.dart`, `user_model.dart`)
+- Widget files: `*_widget.dart` (e.g., `story_card_widget.dart`)
+- Service files: `*_service.dart` (e.g., `auth_service.dart`, `story_service.dart`)
+
+## Code Quality & Standards
+
+### Dart/Flutter Best Practices
+- Always use `const` constructors when possible
+- Prefer composition over inheritance
+- Use meaningful variable and function names in Turkish context
+- Implement proper error handling with try-catch blocks
+- Use async/await for asynchronous operations
+- Follow SOLID principles in service layer
+
+### State Management
+- Use Provider or Riverpod for state management
+- Implement proper ViewModel pattern with ChangeNotifier
+- Separate UI state from business logic
+- Use StreamController for real-time data updates
+
+### UI/UX Guidelines
+
+#### Design System
+- Primary Color: `Color(0xFF6C63FF)` (Purple gradient)
+- Secondary Colors: Use Material 3 color scheme
+- Background: `Color(0xFFFAFBFF)` (Light blue-white)
+- Text Colors: 
+  - Primary: `Color(0xFF2D3748)` (Dark gray)
+  - Secondary: `Color(0xFF718096)` (Medium gray)
+- Border Radius: 12-16px for cards, 8px for buttons
+- Shadows: Subtle shadows with `alpha: 0.05-0.1`
+
+#### Typography
+- Font Family: Google Fonts Poppins
+- Headers: Bold, 18-24px
+- Body Text: Regular, 14-16px
+- Captions: Medium weight, 12-14px
+
+#### Component Standards
+- Use Material 3 design principles
+- Implement consistent spacing (8px grid system)
+- Create reusable widget components
+- Use proper semantic colors and accessibility
+- Implement smooth animations and transitions
+
+### Firebase Integration
+- Implement proper Firebase Auth with Google Sign-In
+- Use Firebase Firestore for data storage
+- Handle authentication states properly
+- Implement offline support where applicable
+
+### Google Ads Integration
+- Use proper ad placement strategies
+- Implement test ad units during development
+- Handle ad loading states gracefully
+- Respect user experience with non-intrusive ads
+
+## Development Guidelines
+
+### Code Organization
+- Keep views lean and focused on UI
+- Move business logic to ViewModels
+- Use dependency injection for services
+- Implement proper separation of concerns
+
+### Error Handling
+- Implement comprehensive error handling
+- Show user-friendly error messages in Turkish
+- Log errors for debugging purposes
+- Handle network connectivity issues
+
+### Performance
+- Use ListView.builder for large lists
+- Implement proper image caching
+- Optimize widget rebuilds
+- Use const constructors where possible
+
+### Testing
+- Write unit tests for ViewModels and services
+- Implement widget tests for critical UI components
+- Use mock data for testing
+- Test error scenarios and edge cases
+
+## Turkish Localization
+- All user-facing text should be in Turkish
+- Use proper Turkish grammar and spelling
+- Implement RTL support if needed
+- Consider Turkish cultural context in content
+
+## Security & Privacy
+- Implement proper data validation
+- Use secure storage for sensitive data
+- Follow GDPR compliance for user data
+- Implement proper authentication flows
+
+## Code Examples
+
+### ViewModel Structure
+```dart
+class AuthViewModel extends ChangeNotifier {
+  final AuthService _authService;
+  
+  AuthViewModel(this._authService);
+  
+  bool _isLoading = false;
+  bool get isLoading => _isLoading;
+  
+  Future<void> signInWithGoogle() async {
+    _isLoading = true;
+    notifyListeners();
+    
+    try {
+      await _authService.signInWithGoogle();
+    } catch (e) {
+      // Handle error
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+}
+```
+
+### View Structure
+```dart
+class LoginView extends StatelessWidget {
+  const LoginView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFFAFBFF),
+      body: Consumer<AuthViewModel>(
+        builder: (context, authViewModel, child) {
+          return SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Column(
+                children: [
+                  // UI Components
+                ],
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+```
+
+### Model Structure
+```dart
+class Story {
+  final String id;
+  final String title;
+  final String description;
+  final String category;
+  final int duration;
+  final String imageUrl;
+  
+  const Story({
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.category,
+    required this.duration,
+    required this.imageUrl,
+  });
+}
+```
+
+## Dependencies & Packages
+- Use latest stable versions of packages
+- Prefer official Flutter packages
+- Document any custom packages used
+- Keep dependencies minimal and focused
+
+## Git & Version Control
+- Use meaningful commit messages
+- Create feature branches for new functionality
+- Implement proper code review process
+- Use conventional commit format
+
+## Deployment & Build
+- Configure proper build variants
+- Implement proper signing for releases
+- Use environment-specific configurations
+- Test on multiple device sizes and orientations
+
+Remember: This is a children's application, so prioritize safety, simplicity, and engaging user experience. Always consider the target audience (children and parents) when making design and functionality decisions.

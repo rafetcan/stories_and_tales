@@ -1,0 +1,37 @@
+Firebase Firestore İndeks Gereksinimleri
+==========================================
+
+Okuma ilerlemesi sorguları için aşağıdaki composite index'leri oluşturmanız gerekiyor:
+
+1. Devam Eden Hikayeler Sorgusu
+   Collection: users/{userId}/reading_progress
+   Fields indexed:
+   - isCompleted: Ascending
+   - progressPercentage: Ascending
+   - lastReadAt: Descending
+
+2. Tamamlanan Hikayeler Sorgusu
+   Collection: users/{userId}/reading_progress
+   Fields indexed:
+   - isCompleted: Ascending
+   - lastReadAt: Descending
+
+3. Feedback Rate Limiting Sorgusu
+   Collection: feedbacks
+   Fields indexed:
+   - userId: Ascending
+   - createdAt: Descending
+
+4. Feedback Günlük Limit Sorgusu
+   Collection: feedbacks
+   Fields indexed:
+   - userId: Ascending
+   - createdAt: Ascending
+
+NOT: Bu index'ler olmadan uygulama çalıştırıldığında Firebase Console'da 
+hata mesajı göreceksiniz. Hata mesajındaki linke tıklayarak otomatik olarak 
+index'leri oluşturabilirsiniz.
+
+Alternatif olarak Firebase Console'dan manuel oluşturun:
+Firebase Console → Firestore Database → Indexes → Create Index
+
